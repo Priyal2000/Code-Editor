@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+}
+.navbar {
+  overflow: hidden;
+  background-color: hsl(225, 6%, 25%);
+}
+button
+{
+background-color:#00A36C;
+border-radius: 10px;
+
+}
+.navbar h1
+{
+float:left;
+padding-left: 5px;
+font-size: 20px;
+color: #00A36C
+
+
+}
+
+.navbar button {
+
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  
+}
+
+
+.navbar button:hover {
+  background-color: lightgrey;
+ color: #00A36C
+}
+
+.flex-container
+{
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding-left: 10px;
+  padding-top: 10px;
+  
+  
+}
+.top-pane {
+  
+  height: 100vh;
+  border: 1px solid gray;
+}
+.tabs
+{
+  background-color:#00A36C ;
+  border: 1px solid gray;
+   border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  
+  color:white;
+  
+  font-family:verdana;
+ 
+ border-bottom:none;
+}
+
+.btm-pane {
+  
+  
+  margin-right: 1rem;
+  
+    position:relative;
+    
+  
+}
+.btm-pane .content {
+  overflow: hidden;
+  height:95vh;
+  padding: 1px;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid gray;
+  
+}
+.btm-pane .title {
+  height:12px;
+  line-height:14px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #00A36C;
+  font-size:14px;
+  
+  font-family:verdana;
+  display:block;
+  color:white;
+  display:block;
+  padding:10px;
+  border: 1px solid gray;
+  border-bottom:none;
+}
+.editor-container {
+   padding: 0.5rem;
+  }
+
+
+.CodeMirror {
+  height: 100% !important;
+}
+
+
+.code-mirror-wrapper {
+  
+  height: 95vh;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+  overflow: hidden;
+}
+
