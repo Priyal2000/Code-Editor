@@ -7,7 +7,7 @@ body {
 }
 button
 {
-background-color:#00A36C;
+background-color:#2d4cfc;
 border-radius: 10px;
 
 }
@@ -16,7 +16,7 @@ border-radius: 10px;
 float:left;
 padding-left: 5px;
 font-size: 20px;
-color: #00A36C
+color: #2d4cfc;
 
 
 }
@@ -64,7 +64,7 @@ color: #00A36C
 }
 .tabs
 {
-  background-color:#00A36C ;
+  background-color:#2d4cfc ;
   border: 1px solid gray;
    border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -100,7 +100,7 @@ color: #00A36C
   line-height:14px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  background: #00A36C;
+  background:#2d4cfc;
   font-size:14px;
   
   font-family:verdana;
