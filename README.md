@@ -11,16 +11,17 @@ Download the zip folder and ensure that Node is installed in your desktop.
 
 Install the following dependencies:
 
+To create an editor
 <pre><code>npm install codemirror
 </code></pre>
 
-npm install react-codemirror2
+<pre><code>npm install react-codemirror2</pre></code>
 
-npm install node-fetch
+<pre><code>npm install node-fetch</pre></code>
 
-npm install fast-xml-parser
+<pre><code>npm install fast-xml-parser</pre></code>
 
 ### Then run the following command
 
-npm start
+<pre><code>npm start</pre></code>
 
