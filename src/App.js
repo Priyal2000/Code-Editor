@@ -23,9 +23,54 @@ const saveHtml = async (e) => {
     body: JSON.stringify( {
       api_dev_key: "Eb2QzoySh0PxS3sABUztvcutkOnsL1-q",
       api_option: "paste",
-      api_paste_name: "Test.html",
-      api_paste_code: "<h1>Hello<h1>",
+      api_paste_name: "index.html",
+      api_paste_code: `${html}`,
       api_paste_format: "html5",
+      api_paste_private:  0,
+      api_paste_expire_date: "N",
+
+    }),
+  });
+
+  const url = await res.text();
+  console.log(url);
+  
+}
+
+const saveJs = async (e) => {
+
+  const res = await fetch("https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php", {
+    method: "POST",
+    url:"https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php",
+    headers: { "Content-Type": "application/x-www-form-urlencoded", Referer: "http://pastebin.com"},
+    body: JSON.stringify( {
+      api_dev_key: "Eb2QzoySh0PxS3sABUztvcutkOnsL1-q",
+      api_option: "paste",
+      api_paste_name: "index.js",
+      api_paste_code: `${js}`,
+      api_paste_format: "Javascript",
+      api_paste_private:  0,
+      api_paste_expire_date: "N",
+
+    }),
+  });
+
+  const url = await res.text();
+  console.log(url);
+  
+}
+const saveCss = async (e) => {
+
+  const res = await fetch("https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php", {
+    method: "POST",
+    url:"https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php",
+    headers: { "Content-Type": "application/x-www-form-urlencoded", Referer: "http://pastebin.com"},
+    body: JSON.stringify( {
+      api_dev_key: "Eb2QzoySh0PxS3sABUztvcutkOnsL1-q",
+      api_option: "paste",
+      api_paste_name: "style.css",
+      api_paste_code: `${css}`,
+      api_paste_format: "css",
       api_paste_private:  0,
       api_paste_expire_date: "N",
 
@@ -58,8 +103,8 @@ const saveHtml = async (e) => {
       <div class="navbar">
    <h1>CODE EDITOR</h1>
   <button onClick={saveHtml}>Save HTML</button>
-  <button >Save CSS</button>
-  <button >Save JS</button>
+  <button onClick={saveCss} >Save CSS</button>
+  <button onClick={saveJs}>Save JS</button>
 </div>
     <div className="flex-container">
       <div className="column">
