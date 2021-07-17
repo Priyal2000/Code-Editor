@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Editor from './component/Editor'
 import {Tab,Tabs,TabList,TabPanel} from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import PasteClient  from "pastebin-api";
-import axios from 'axios';
 import fetch, { BodyInit } from "node-fetch";
 import Parser from "fast-xml-parser";
 
@@ -16,32 +14,22 @@ function App() {
   
 const saveHtml = async (e) => {
 
-  const res = await fetch("https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php", {
-    method: "POST",
-    url:"https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php",
-    headers: { "Content-Type": "application/x-www-form-urlencoded", Referer: "http://pastebin.com"},
-    body: JSON.stringify( {
-      api_dev_key: "Eb2QzoySh0PxS3sABUztvcutkOnsL1-q",
-      api_option: "paste",
-      api_paste_name: "index.html",
-      api_paste_code: `${html}`,
-      api_paste_format: "html5",
-      api_paste_private:  0,
-      api_paste_expire_date: "N",
+  const hastebin = require("hastebin-paste");
+hastebin(`{html}`, { url: "https://cors-anywhere.herokuapp.com/https://hastebin.com", extention: "html", message: "Link is:" }).then(haste => {
+    console.log(haste)
+}).catch(error => {
+       console.error(error);
+}); 
 
-    }),
-  });
 
-  const url = await res.text();
-  console.log(url);
-  
 }
 
 const saveJs = async (e) => {
 
-  const res = await fetch("https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php", {
+
+  const res = await fetch("https://pastebin.com/api/api_post.php", {
     method: "POST",
-    url:"https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php",
+    url:"https://pastebin.com/api/api_post.php",
     headers: { "Content-Type": "application/x-www-form-urlencoded", Referer: "http://pastebin.com"},
     body: JSON.stringify( {
       api_dev_key: "Eb2QzoySh0PxS3sABUztvcutkOnsL1-q",
@@ -61,24 +49,12 @@ const saveJs = async (e) => {
 }
 const saveCss = async (e) => {
 
-  const res = await fetch("https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php", {
-    method: "POST",
-    url:"https://cors-anywhere.herokuapp.com/https://pastebin.com/api/api_post.php",
-    headers: { "Content-Type": "application/x-www-form-urlencoded", Referer: "http://pastebin.com"},
-    body: JSON.stringify( {
-      api_dev_key: "Eb2QzoySh0PxS3sABUztvcutkOnsL1-q",
-      api_option: "paste",
-      api_paste_name: "style.css",
-      api_paste_code: `${css}`,
-      api_paste_format: "css",
-      api_paste_private:  0,
-      api_paste_expire_date: "N",
-
-    }),
-  });
-
-  const url = await res.text();
-  console.log(url);
+  const hastebin = require("hastebin-paste");
+hastebin(`{css}`, { url: "https://cors-anywhere.herokuapp.com/https://hastebin.com", extention: "css", message: "Link is:" }).then(haste => {
+    console.log(haste)
+}).catch(error => {
+       console.error(error);
+}); 
   
 }
 
