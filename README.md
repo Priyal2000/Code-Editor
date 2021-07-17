@@ -11,7 +11,8 @@ Download the zip folder and ensure that Node is installed in your desktop.
 
 Install the following dependencies:
 
-npm install codemirror
+<pre><code>npm install codemirror
+</code></pre>
 
 npm install react-codemirror2
 
