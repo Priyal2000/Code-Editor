@@ -10,8 +10,6 @@ https://priyal2000.github.io/Code-Editor/
 Download the zip folder and ensure that Node is installed in your desktop.
 
 Install the following dependencies:
-
-To create an editor
 <pre><code>npm install codemirror
 </code></pre>
 
