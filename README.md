@@ -1,5 +1,5 @@
 # Code-Editor
-This is a react app that provides a dynamic HTML/CSS/Javascript code editor along with a live view to visualise the code. PasteBin API has been used to copy the code to a shareble link generated.
+This is a react app that provides a dynamic HTML/CSS/Javascript code editor along with a live view to visualise the code. PasteBin API & HasteBin API have been used to copy the code to a shareble link generated. (Since the Paste Bin API is down)
 
 ## Deployed 
 The project is deployed on 
@@ -18,6 +18,9 @@ Install the following dependencies:
 <pre><code>npm install node-fetch</pre></code>
 
 <pre><code>npm install fast-xml-parser</pre></code>
+
+<pre><code>npm install hastebin-paste</pre></code>
+
 
 ### Then run the following command
 
